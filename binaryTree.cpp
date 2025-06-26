@@ -50,7 +50,7 @@ public :
         // Step 1: Allocate memory for the new node
         Node *newNode = new Node();
 
-        // Step 2: Assign value to the datafield of the new node
+        // Step 2: Assign value to the data field of the new node
         newNode->info = x;
 
         // Step 3: Make the left and right child of the new node point to NULL
@@ -77,6 +77,19 @@ public :
         {
             // 6a: Make the left child of parent point to the new node
             parent-> leftchild = newNode;
+
+            //6b: Exit
+            return;
+        }
+
+        // Step 7: If the value in the data field of the new node is greater than that of the parent
+        else if (x > parent->info)
+        {
+            // 7a: Make the right child of parent point to the new node
+            parent->rightchild = newNode;
+
+            //7b: Exit
+            return;
         }
 
 
