@@ -68,7 +68,8 @@ public :
             // 5a: Mark the node as ROOT
             ROOT = newNode;
 
-            
+            // 5b: Exit
+            return;
         }
 
 
