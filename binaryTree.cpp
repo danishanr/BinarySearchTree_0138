@@ -88,12 +88,30 @@ public :
             // 7a: Make the right child of parent point to the new node
             parent->rightchild = newNode;
 
-            //7b: Exit
+            // 7b: Exit
+            return;
+        }
+    }  
+
+    bool isEmpty()
+    {
+        // Checks if the tree is empty
+        return ROOT == nullptr;
+    }
+
+    void inorder(Node *ptr)
+    {
+        if (isEmpty())
+        {
+            cout << "Tree is empty" << endl;
             return;
         }
 
-
-
+        if (ptr == nullptr)
+            return;
+        
+        inorder(ptr->leftchild);
+        cout << ptr->info << " "; // parent
+        inorder(ptr->rightchild);
     }
-    
 };
