@@ -25,4 +25,15 @@ public :
     {
         ROOT = nullptr; // Intializing ROOT to null
     }
+
+    void search(int element, Node *&parent, Node *&currentNode)
+    {
+        // This func searches the currentNode of the specified Node as well as the currentNode of its parent
+        currentNode = ROOT;
+        parent = nullptr;
+        while ((currentNode) != nullptr && (currentNode->info != element))
+        {
+
+        }
+    }
 };
